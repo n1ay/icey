@@ -1,0 +1,29 @@
+<project name="icey" basedir="." default="compile-run">
+    <property name="target.dir" value="${basedir}/target/"/>
+    <property name="version" value="1.0-SNAPSHOT"/>
+
+    <target name="clean">
+        <exec executable="/usr/bin/mvn">
+            <arg value="clean"/>
+        </exec>
+    </target>
+
+    <target name="install">
+        <exec executable="/usr/bin/mvn">
+            <arg value="install"/>
+        </exec>
+    </target>
+
+    <target name="compile">
+        <exec executable="/usr/bin/mvn">
+            <arg value="compile"/>
+        </exec>
+    </target>
+
+    <target name="run">
+        <java jar="${target.dir}/${ant.project.name}-${version}.jar" fork="true"/>
+    </target>
+
+    <target name="compile-run" depends="install,run"/>
+    <target name="clean-run" depends="clean,install,run"/>
+</project>
