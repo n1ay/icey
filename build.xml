@@ -21,7 +21,9 @@
     </target>
 
     <target name="run">
-        <java jar="${target.dir}/${ant.project.name}-${version}.jar" fork="true"/>
+        <java jar="${target.dir}/${ant.project.name}-${version}.jar" fork="true">
+            <arg value="--spring.profiles.active=run"/>
+        </java>
     </target>
 
     <target name="compile-run" depends="install,run"/>
