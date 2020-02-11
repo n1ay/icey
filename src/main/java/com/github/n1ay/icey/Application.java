@@ -7,9 +7,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import java.util.Collections;
 
 @SpringBootApplication
-public class Launcher extends SpringBootServletInitializer {
+public class Application extends SpringBootServletInitializer {
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(Launcher.class);
+        SpringApplication app = new SpringApplication(Application.class);
         app.setDefaultProperties(Collections.singletonMap("server.port", 8880));
         app.run(args);
     }
