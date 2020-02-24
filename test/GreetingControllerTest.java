@@ -1,4 +1,4 @@
-import com.github.n1ay.icey.GreetingController;
+import com.github.n1ay.icey.controller.GreetingController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

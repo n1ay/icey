@@ -1,4 +1,4 @@
-package com.github.n1ay.icey;
+package com.github.n1ay.icey.controller;
 
 import com.github.n1ay.icey.data.model.Series;
 import com.github.n1ay.icey.data.repository.SeriesRepository;

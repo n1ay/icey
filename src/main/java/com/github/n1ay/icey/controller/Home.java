@@ -1,4 +1,4 @@
-package com.github.n1ay.icey;
+package com.github.n1ay.icey.controller;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
