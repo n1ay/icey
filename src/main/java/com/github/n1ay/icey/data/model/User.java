@@ -3,7 +3,7 @@ package com.github.n1ay.icey.data.model;
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity
+@Entity(name = "app_user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

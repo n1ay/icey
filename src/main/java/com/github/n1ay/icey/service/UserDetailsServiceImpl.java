@@ -1,5 +1,6 @@
 package com.github.n1ay.icey.service;
 
+import com.github.n1ay.icey.data.model.Role;
 import com.github.n1ay.icey.data.model.User;
 import com.github.n1ay.icey.data.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
