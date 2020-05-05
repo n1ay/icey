@@ -1,6 +1,9 @@
 package com.github.n1ay.icey.controller.dto;
 
 import com.github.n1ay.icey.controller.dto.validator.PasswordMatches;
+import com.github.n1ay.icey.controller.dto.validator.UniqueValue;
+import com.github.n1ay.icey.data.model.User;
+import com.github.n1ay.icey.data.repository.UserRepository;
 
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;
@@ -9,9 +12,7 @@ import javax.validation.constraints.NotEmpty;
 @PasswordMatches
 public class UserRegistrationDto {
 
-    @NotEmpty
-    private String login;
-
+    @UniqueValue(getterMethodName = "getEmail", modelClass = User.class, repositoryClass = UserRepository.class)
     @Email
     @NotEmpty
     private String email;
@@ -24,14 +25,6 @@ public class UserRegistrationDto {
 
     @AssertTrue
     private boolean termsAccepted;
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
 
     public String getEmail() {
         return email;
