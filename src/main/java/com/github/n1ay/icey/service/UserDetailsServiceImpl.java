@@ -1,6 +1,5 @@
 package com.github.n1ay.icey.service;
 
-import com.github.n1ay.icey.data.model.Role;
 import com.github.n1ay.icey.data.model.User;
 import com.github.n1ay.icey.data.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return org.springframework.security.core.userdetails.User.builder()
                 .username(user.getEmail())
                 .password(user.getPassword())
-                .roles(user.getRoles().stream().map(Enum::toString).toArray(String[]::new))
+                .roles(user.getRole().name())
                 .build();
     }
 }

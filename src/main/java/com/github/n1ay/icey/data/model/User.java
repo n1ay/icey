@@ -10,8 +10,7 @@ public class User {
     private Long id;
     private String email;
     private String password;
-    @ElementCollection
-    private Set<Role> roles;
+    private Role role;
 
     public Long getId() {
         return id;
@@ -37,12 +36,12 @@ public class User {
         this.password = password;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
+    public Role getRole() {
+        return role;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public void setRole(Role role) {
+        this.role = role;
     }
 }
 

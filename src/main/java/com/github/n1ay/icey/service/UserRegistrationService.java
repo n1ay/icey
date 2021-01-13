@@ -22,7 +22,7 @@ public class UserRegistrationService {
         User user = new User();
         user.setEmail(userRegistrationDto.getEmail());
         user.setPassword(passwordEncoder.encode(userRegistrationDto.getPassword()));
-        user.setRoles(Role.getUserRoleSet());
+        user.setRole(Role.USER);
         userRepository.save(user);
     }
 }
